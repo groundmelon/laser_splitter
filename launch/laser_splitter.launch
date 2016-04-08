@@ -1,0 +1,12 @@
+<launch>
+	<node pkg="laser_splitter" type="laser_splitter.py" name="laser_splitter" output="screen">
+		<remap from="~scan_in" to="/scan/raw" />
+		<remap from="~scan_out" to="/scan" />
+		<remap from="~height" to="/scan/height" />
+
+		<param name="~laser_range_upper_limit"  type="double" value="1.900" />
+	 	<param name="~height_range_lower_limit" type="double" value="2.054" />
+		<param name="~height_range_upper_limit" type="double" value="2.084" />
+		<param name="~height_offset"  type="double" value="0.44" />
+	</node>
+</launch>
